@@ -9,7 +9,10 @@ All dependencies are located in the vendor folder so Go 1.6+ is required.
 ```
 go build -o go-chat .
 ```
-Run
+
+You may need to set your `GOPATH` environment variable for the build to find the vendored packages.
+
+### Run
 
 ```
 ./go-chat
