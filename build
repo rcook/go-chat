@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+script_dir=$(cd $(dirname $0); pwd -P)
+go_bindata_dir=$script_dir/vendor/github.com/jteeuwen/go-bindata/go-bindata
+go_bindata_path=$go_bindata_dir/go-bindata
+
+cd $go_bindata_dir
+GOPATH=$HOME go build
+
+cd $script_dir
+$go_bindata_path public
+
+cd $script_dir
+GOPATH=$HOME go build -o go-chat .
+
+cd $script_dir
+./go-chat
