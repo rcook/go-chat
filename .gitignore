@@ -1,3 +1,5 @@
 /.idea
 /go-chat
+/go-chat.exe
 /vendor/github.com/jteeuwen/go-bindata/go-bindata/go-bindata
+/vendor/github.com/jteeuwen/go-bindata/go-bindata/go-bindata.exe
