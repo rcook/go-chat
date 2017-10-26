@@ -42,11 +42,11 @@ new Vue({
 
         join: function () {
             if (!this.email) {
-                Materialize.toast('You must enter an email', 2000);
+                Materialize.toast('You must enter an e-mail address', 2000);
                 return
             }
             if (!this.username) {
-                Materialize.toast('You must choose a username', 2000);
+                Materialize.toast('You must choose a display name', 2000);
                 return
             }
             this.email = $('<p>').html(this.email).text();
